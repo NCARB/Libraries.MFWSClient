@@ -31,7 +31,6 @@ namespace MFaaP.MFWSClient
 
         }
 
-#if NETSTANDARD2_0_OR_GREATER
         public RestSharpRestClient(HttpClient httpClient, bool disposeHttpClient = false) 
 			: base(httpClient, disposeHttpClient)
         {
@@ -42,7 +41,6 @@ namespace MFaaP.MFWSClient
         {
 
         }
-#endif
 
         public Task<RestResponse<T>> ExecuteAsync<T>(RestRequest request, CancellationToken cancellationToken = default)
 		{
